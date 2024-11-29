@@ -27,7 +27,7 @@
         <li><a href="#education_experience">Formation</a></li>
         <li><a  href="#work">Projets</a></li>
         <li><a href="#education_experience">Expérience</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <!-- <li><a href="#contact">Contact</a></li> -->
         </ul>
     </nav>
 </header>
@@ -67,15 +67,18 @@
         </a>
       </li>
       <li>
-        <a class="phone" aria-label="Phone" href="tel:0762471219">
-          <i class="fas fa-phone"></i>
+        <a class="phone" aria-label="WhatsApp" href="https://wa.me/212762471219" target="_blank">
+          <i class="fab fa-whatsapp"></i>
+
+
         </a>
       </li>
       <li>
-        <a class="email" aria-label="Email" href="hananeabounouh@gmail.com">
+        <a class="email" aria-label="Email" href="mailto:hananeabounouh@gmail.com">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
+      
     </ul>
   </div>
   
@@ -130,7 +133,8 @@
 
 <!-- skills section starts -->
 <section class="skills" id="skills">
-    <h2 class="heading"><i class="fas fa-laptop-code"></i> Skills & <span>Abilities</span></h2>
+  <h2 class="heading"><i class="fas fa-laptop-code"></i> Compétences & <span>Capacités</span></h2>
+
     <div class="container">
         <div class="row" id="skillsContainer">
             <!-- Dynamic Content Will Be Inserted Here -->
@@ -148,7 +152,8 @@
           <!-- Education Column -->
           <div class="timeline-column">
               <h1 class="heading">
-                  <i class="fas fa-graduation-cap"></i> My <span>Education</span>
+                <i class="fas fa-graduation-cap"></i> Ma <span>Formation</span>
+
               </h1>
               <div class="timeline">
                   <div class="timeline-item">
@@ -188,7 +193,7 @@
           <!-- Experience Column -->
           <div class="timeline-column">
               <h1 class="heading">
-                  <i class="fas fa-briefcase"></i> My <span>Experience</span>
+                <i class="fas fa-briefcase"></i> Mon <span>Expérience</span>
               </h1>
               <div class="timeline">
                   <div class="timeline-item">
@@ -230,10 +235,35 @@
       </div>
   </div>
 </section>
-  
 
 
-<footer id="footer">
+
+<!-- work project section starts -->
+<section class="work" id="work">
+  <h2 class="heading">
+    <i class="fas fa-laptop-code"></i> Projets <span>Réalisés</span>
+  </h2>
+
+  <div class="box-container" id="project-container">
+    <!-- Dynamic project boxes will be injected here -->
+  </div>
+
+  <div class="viewall">
+    <button id="prev-page" class="btn" style="display: none;">
+      <span>Page précédente</span>
+      <i class="fas fa-arrow-left"></i>
+    </button>
+    <button id="next-page" class="btn">
+      <span>Page suivante</span>
+      <i class="fas fa-arrow-right"></i>
+    </button>
+  </div>
+</section>
+<!-- work project section ends -->
+
+
+
+<footer id="footer" >
   <div class="container">
       <div class="row">
           <div class="col-sm-12">
@@ -250,8 +280,8 @@
                   </a>
                 </li>
                 <li>
-                  <a class="phone" aria-label="Phone" href="tel:0762471219">
-                    <i class="fas fa-phone"></i>
+                  <a class="phone" aria-label="WhatsApp" href="https://wa.me/212762471219" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
                   </a>
                 </li>
                 <li>
@@ -271,120 +301,8 @@
 
 
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <script>
-        const menu = document.getElementById('menu');
-        const navbar = document.querySelector('.navbar');
+    <script src="js/js.js"></script>
 
-        menu.addEventListener('click', () => {
-            navbar.classList.toggle('nav-toggle');
-        });
-
-        document.addEventListener('click', (e) => {
-            if (!navbar.contains(e.target) && !menu.contains(e.target)) {
-                navbar.classList.remove('nav-toggle');
-            }
-        });
-    
-
-    const skills = [
-        {
-            "name": "TailwindCSS",
-            "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/48px-Tailwind_CSS_Logo.png"
-        },
-        {
-            "name": "Bootstrap",
-            "icon": "https://img.icons8.com/color/48/000000/bootstrap.png"
-        },
-        {
-            "name": "Sass",
-            "icon": "https://img.icons8.com/color/48/000000/sass.png"
-        },
-        {
-            "name": "HTML5",
-            "icon": "https://img.icons8.com/color/48/000000/html-5--v1.png"
-        },
-        {
-            "name": "CSS3",
-            "icon": "https://img.icons8.com/color/48/000000/css3.png"
-        },
-        {
-            "name": "JavaScript",
-            "icon": "https://img.icons8.com/color/48/000000/javascript--v1.png"
-        },
-        {
-            "name": "PHP",
-            "icon": "https://img.icons8.com/offices/48/000000/php-logo.png"
-        },
-        {
-            "name": "MongoDB",
-            "icon": "https://img.icons8.com/color/48/000000/mongodb.png"
-        },
-        {
-            "name": "MySQL",
-            "icon": "https://img.icons8.com/color/48/000000/mysql-logo.png"
-        },
-        {
-            "name": "GitHub",
-            "icon": "https://img.icons8.com/glyph-neue/48/ffffff/github.png"
-        },
-        {
-            "name": "Laravel",
-            "icon": "https://img.icons8.com/fluency/48/000000/laravel.png"
-        },
-        {
-            "name": "UML",
-            "icon": "https://img.icons8.com/glyph/48/000000/uml.png"
-        },
-        {
-            "name": "Figma",
-            "icon": "https://img.icons8.com/color/48/000000/figma.png"
-        }
-    ];
-
-    // Dynamically create the skill bars
-    const skillsContainer = document.getElementById("skillsContainer");
-
-    skills.forEach(skill => {
-        const skillBar = document.createElement("div");
-        skillBar.classList.add("bar");
-
-        skillBar.innerHTML = `
-            <div class="info">
-                <img src="${skill.icon}" alt="${skill.name} Icon"/>
-                <span>${skill.name}</span>
-            </div>
-        `;
-        skillsContainer.appendChild(skillBar);
-    });
-    document.addEventListener("DOMContentLoaded", () => {
-      const navbarLinks = document.querySelectorAll(".navbar ul li a");
-      const sections = document.querySelectorAll("section");
-    
-      const makeActive = () => {
-        let currentSection = "";
-    
-        // Vérifie la section visible
-        sections.forEach((section) => {
-          const sectionTop = section.offsetTop - 50; // Ajuster selon la hauteur de la navbar
-          if (window.scrollY >= sectionTop) {
-            currentSection = section.getAttribute("id");
-          }
-        });
-    
-        // Met à jour la classe active
-        navbarLinks.forEach((link) => {
-          link.classList.remove("active");
-          if (link.getAttribute("href").includes(currentSection)) {
-            link.classList.add("active");
-          }
-        });
-      };
-    
-      // Écoute de l'événement scroll
-      window.addEventListener("scroll", makeActive);
-    });
-    
-
-    </script>
+   
 </body>
 </html>

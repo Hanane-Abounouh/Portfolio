@@ -10,6 +10,9 @@
   border: none;
   text-transform: capitalize;
   transition: all 0.2s linear;
+  
+ 
+
 }
 html {
   font-size: 62.5%;
@@ -19,17 +22,17 @@ html {
 body {
   background: #f7f7f7;
   font-family: "Poppins", sans-serif;
+ 
+
 }
 
 *::selection {
   background: #2b3dda;
   color: #fff;
+  
+ 
 }
 
-html {
-  font-size: 62.5%;
-  overflow-x: hidden;
-}
 html::-webkit-scrollbar {
   width: 0.8rem;
 }
@@ -60,6 +63,7 @@ header {
 section {
   min-height: 70vh;
   padding: 7rem 9%;
+  
 }
 .heading {
   font-size: 3.5rem;
@@ -129,12 +133,8 @@ header .navbar ul li a:hover {
     background-color: #0e0f31;
   }
 
-  .heading {
-    font-size: 3rem !important;
-    color: rgb(32, 32, 32);
-    font-weight: 800;
-    text-align: center;
-  }
+
+ 
   header .navbar ul {
     flex-flow: column;
     padding: 1rem;
@@ -182,6 +182,8 @@ header .navbar ul li a:hover {
   align-items: center;
   justify-content: center;
   padding: 1.7rem 12%;
+  width: 100%;
+  max-width: 100%; 
 }
 
 .home #particles-js {
@@ -302,6 +304,7 @@ header .navbar ul li a:hover {
   margin-bottom: 14px;
 }
 
+
 .social-icons a {
   width: 42px;
   height: 42px;
@@ -367,15 +370,32 @@ header .navbar ul li a:hover {
     flex-direction: column;
     padding: 10rem 3%;
     text-align: center;
+   
+    
+  }
+  .home .image {
+    flex: 1 1 28rem;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   /* Centrer l'image */
   .home .image img {
     margin: 0 auto;
-    width: 25rem;
-    height: 25rem;
+    justify-items: auto;
+    width: 28rem;
+    height: 28rem;
   }
+  .heading {
+    font-size: 3rem !important;
+    color: rgb(32, 32, 32);
+    font-weight: 800;
 
+   
+  }
+ 
   /* Ajuster le texte */
   .home .content h2 {
     font-size: 3rem;
@@ -398,7 +418,7 @@ header .navbar ul li a:hover {
  
   .home .btn span {
     font-weight: 700;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     letter-spacing: 0.1rem;
   }
   /* Espacement pour les icônes */
@@ -414,6 +434,8 @@ header .navbar ul li a:hover {
 /* about section starts */
 .about {
   background: rgb(255, 255, 255);
+  
+
 
 }
 .about .row {
@@ -514,7 +536,9 @@ header .navbar ul li a:hover {
 /* skills section starts */
 .skills {
     min-height: 80vh;
+   
     background: linear-gradient(to bottom, #57059e, #4a00e0);
+ 
   }
   .skills h2 {
     color: #fff;
@@ -726,9 +750,222 @@ header .navbar ul li a:hover {
 
 
 
+/* work section starts */
 
+.work h2 {
+  color: black;
+  padding: 1rem;
+}
+.work .heading span {
+  color: #57059e;
+}
+.work .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 2rem;
+  justify-content: center;
+}
 
+.work .box-container .box {
+  flex: 1 1 45%; /* Chaque projet occupe 45% de la largeur, 2 projets par ligne */
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  height: 32rem;
+}
+.work .box-container .box img {
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+.work .box-container .box .content {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 85%;
+  left: 0;
+  background-color: #ffffffe6;
+  display: flex;
+  flex-direction: column;
+}
+.work .box-container .box .content .tag {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 4.5rem;
+  width: 100%;
+  padding-left: 1rem;
+  background: linear-gradient(to right, #57059e, #4a00e0);
+}
+.work .box-container .box .content .tag h3 {
+  font-size: 2rem;
+  color:white
+}
+.work .box-container .box:hover .content {
+  top: 25%;
+}
+.work .desc {
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.work .desc p {
+  font-size: 1.5rem;
+}
+.work .desc .btns {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 2rem;
+}
+.work .desc .btns .btn {
+  line-height: 0;
+  display: inline;
+  padding: 1.5rem 2.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  color: #fff;
+  background: rgb(12, 12, 12);
+  margin-right: 2rem;
+}
+.work .desc .btns .btn:hover {
+  background: #310ae0f5;
+}
+.work .viewall {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.work .viewall .btn {
+  position: relative;
+  line-height: 0;
+  padding: 1.6rem 3rem;
+  border-radius: 0.5em;
+  transition: 0.5s;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  border: 2px solid #fff;
+  box-shadow: 0px 5px 10px rgba(65, 84, 241, 0.4);
+  text-align: center;
+}
+.work .viewall .btn span {
+  font-weight: 600;
+  font-size: 1.7rem;
+  font-family: "Nunito", sans-serif;
+  color: #000;
+}
+.work .viewall .btn i {
+  margin-left: 0.3rem;
+  font-size: 1.5rem;
+  transition: 0.3s;
+  color: #000;
+}
+.work .viewall .btn:hover {
+  background: #fff;
+  color: #000;
+}
+.work .viewall .btn:hover i {
+  transform: translateX(5px);
+}
+.work .viewall .btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+/* work section ends */
 
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  /* For tablets and below */
+  .work .box-container .box {
+    flex: 1 1 48%; /* 2 projects per line on tablets */
+  }
+  .home {
+    flex-direction: column;
+    padding: 10rem 3%;
+   
+  }
+  .work .desc p {
+    font-size: 1.2rem;
+  }
+
+  .work .desc .btns .btn {
+    font-size: 1.4rem;
+    padding: 1.2rem 2rem;
+  }
+
+  .work .viewall .btn {
+    padding: 1.4rem 2.8rem;
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* For mobile screens */
+  .work .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 2rem;
+    justify-content: center;
+  }
+ 
+
+  .work .viewall .btn span {
+  font-weight: 600;
+  font-size: 1.5rem;
+ 
+}
+  /* .work .box-container .box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    
+  } */
+  .work .box-container .box .content .tag h3 {
+    font-size: 1.5rem;
+    color:white
+  }
+  
+  .work .box-container .box {
+    flex: 1 1 100%; 
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    height: 30rem;
+  }
+  
+  section {
+    min-height: 70vh;
+    padding: 6rem 1%;
+
+    
+  }
+  .work .desc p {
+    font-size: 1.1rem;
+  }
+
+  .work .desc .btns .btn {
+    font-size: 1.2rem;
+    padding: 1rem 1.5rem;
+  }
+
+  .work .viewall .btn {
+    padding: 1.2rem 2.5rem;
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 768px) {
+  .work .desc p {
+    font-size: 1rem;
+  }
+}
+
+/*footer*/
 #footer {
   background: rgb(0, 1, 43); /* Couleur de fond bleu foncé */
   color: #fff; /* Couleur du texte en blanc */
