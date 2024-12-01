@@ -929,7 +929,9 @@ header .navbar ul li a:hover {
     font-size: 1.5rem;
     color:white
   }
-  
+  .work .box-container .box .content {
+    background-color: #ffff;
+  }
   .work .box-container .box {
     flex: 1 1 100%; 
     border-radius: 0.5rem;
@@ -957,11 +959,6 @@ header .navbar ul li a:hover {
   .work .viewall .btn {
     padding: 1.2rem 2.5rem;
     font-size: 1.4rem;
-  }
-}
-@media (max-width: 768px) {
-  .work .desc p {
-    font-size: 1rem;
   }
 }
 
@@ -1040,4 +1037,13 @@ header .navbar ul li a:hover {
 .btn-scroll:hover {
   background-color: #5304f0;
   transform: scale(1.1);
+}
+@media (max-width: 768px) {
+  .work .desc p {
+    font-size: 1rem;
+  }
+  .btn-scroll {
+    padding: 6px;
+    
+  }
 }
