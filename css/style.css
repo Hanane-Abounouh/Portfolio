@@ -1012,3 +1012,32 @@ header .navbar ul li a:hover {
   margin-top: 20px; /* Espacement au-dessus du copyright */
   font-size: 1.5rem; /* Taille du texte */
 }
+
+
+
+.scroll-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.btn-scroll {
+  background-color: #4a00e0;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.btn-scroll:hover {
+  background-color: #5304f0;
+  transform: scale(1.1);
+}

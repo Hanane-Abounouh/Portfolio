@@ -141,24 +141,24 @@ const projectsData = [
   imageUrl: 'assets/images/projet4.png',
   projectUrl: 'https://github.com/Hanane-Abounouh/vuemastery.git',
   demoUrl: '', // Pas de démo
-}
-// {
-//     title: 'CLENFIX',
-//     description: "site Web front-end pour un service de nettoyage.",
-//     imageUrl: 'assets/images/projet7.png',
-   
-//     demoUrl: '', // Pas de démo
-//   },
-//   {
-//     title: 'VueMastery',
-//     description: "VueMastery est une plateforme dédiée à la création et à la gestion de blogs avec Vue.js. Grâce à une interface intuitive, elle permet aux utilisateurs de créer, publier et administrer leurs contenus facilement, tout en offrant des outils pour analyser l'engagement des lecteurs et améliorer leurs performances.",
-//     imageUrl: 'assets/images/projet8.png',
-//     projectUrl: 'https://github.com/Hanane-Abounouh/vuemastery.git',
-//     demoUrl: '', // Pas de démo
-//   }
+},
+{
+    title: 'CLENFIX',
+    description: "site Web front-end pour un service de nettoyage.",
+    imageUrl: 'assets/images/projet7.png',
+    projectUrl: 'https://github.com/Hanane-Abounouh/-CLENFIX',
+    demoUrl: '', // Pas de démo
+  },
+  {
+    title: 'Elevator Simulation',
+    description: "Une simulation web interactive en JavaScript permettant de visualiser le déplacement d'un ascenseur entre différents étages avec des animations des portes et du mouvement. L'utilisateur peut sélectionner des étages et réinitialiser l'ascenseur facilement.",
+    imageUrl: 'assets/images/projet8.png',
+    projectUrl: 'https://github.com/Hanane-Abounouh/BriefElevator-Simulator---Copie',
+    demoUrl: 'https://hanane-abounouh.github.io/BriefElevator-Simulator---Copie/', 
+  }
 
 
-// Ajoutez plus de projets ici si nécessaire
+//Ajoutez plus de projets ici si nécessaire
 ];
 
 const projectContainer = document.getElementById('project-container');
@@ -232,3 +232,20 @@ if (currentPage < totalPages) {
 renderProjects(currentPage);
 });
 
+
+
+
+
+document.getElementById('scroll-up').addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+document.getElementById('scroll-down').addEventListener('click', () => {
+    window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: 'smooth'
+    });
+});
