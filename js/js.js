@@ -125,7 +125,7 @@ const projectsData = [
   title: 'Event-Planner',
   description: "Event-Planner est une plateforme qui permet d'afficher des événements et aux utilisateurs de proposer les leurs, facilitant la gestion et la découverte d'événements mémorables.",
   imageUrl: 'assets/images/projet2.png',
-  projectUrl: '#',
+  projectUrl: 'https://github.com/Hanane-Abounouh/gestion_evenements',
   demoUrl: '', // Pas de démo
 },
 {
